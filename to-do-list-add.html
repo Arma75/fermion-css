@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>투두리스트</title>
+
+    <style>
+    </style>
+</head>
+
+<body>
+    <header role="banner">
+    </header>
+
+    <main role="main">
+        <article aria-labelledby="to-do-list-add-section">
+            <form id="addForm">
+                <h2 id="to-do-list-add-section">TO DO LIST ADD</h2>
+                <input type="text" id="titleInput">
+                <button type="submit">ADD</button>
+            </form>
+        </article>
+    </main>
+
+    <footer role="contentinfo">
+        <p>&copy; 2025 나의 투두리스트. 모든 권리 보유.</p>
+        <p>접근성: 키보드만으로도 사용할 수 있고, 스크린리더 지원을 고려했습니다.</p>
+    </footer>
+
+    <script>
+        let form = document.getElementById('addForm');
+        form.addEventListener('submit', (event) => {
+            event.preventDefault();
+            postTodoItem();
+        });
+
+        async function postTodoItem() {
+            let API_URL = "https://backend-training-center.onrender.com/insert";
+            console.log(API_URL);
+
+            let titleInput = document.getElementById('titleInput');
+            let json = {};
+            json.title = titleInput.value;
+            console.log(json);
+
+            try {
+                const response = await fetch(API_URL, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(json),
+                });
+
+                const result = await response.text();
+                console.log(result);
+
+                titleInput.value = '';
+            } catch (error) {
+                console.error('Error:', error);
+            }
+        }
+    </script>
+</body>
+</html>
