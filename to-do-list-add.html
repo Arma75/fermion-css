@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>투두리스트</title>
+    <title>🗓️</title>
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
@@ -101,9 +101,18 @@
 
                 for( let i = 0; i < result.length; i++ ) {
                     console.log(result[i].title);
-                    let elem = document.createElement("article");
-                    elem.innerText = result[i].title;
-                    listSection.append(elem);
+                    let checkbox = document.createElement("input");
+                    checkbox.setAttribute("type", "checkbox");
+                    listSection.append(checkbox);
+
+                    let span = document.createElement("span");
+                    span.innerText = result[i].title;
+
+                    let article = document.createElement("article");
+                    article.append(checkbox);
+                    article.append(span);
+                    
+                    listSection.append(article);
                 }
             } catch (error) {
                 console.error('Error:', error);
