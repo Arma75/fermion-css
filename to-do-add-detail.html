@@ -9,6 +9,9 @@
         :root {
             font-size: 16px;
         }
+        * {
+            box-sizing: border-box;
+        }
         body {
             font-family: 'Inter', sans-serif;
             background-color: #f3f4f6;
@@ -40,6 +43,7 @@
             text-transform: none;
         }
         input[type=text] {
+            width: 240px;
             height: 48px;
             padding-left: 1.5rem;
             padding-right: 1.5rem;
@@ -55,9 +59,9 @@
             -moz-appearance: none;
 
             position: relative;
-            width: 24px;
-            height: 24px;
-            border-radius: 0.5rem;
+            width: 28px;
+            height: 28px;
+            border-radius: 0.75rem;
             border: 1px solid #e8e8e8;
             vertical-align: middle;
             cursor: pointer;
@@ -73,6 +77,23 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
+        }
+
+        textarea {
+            border-width: 0;
+            outline-style: none;
+            background-color: transparent;
+            font-family: inherit;
+            font-size: 100%;
+            line-height: inherit;
+            resize: none;
+            
+            width: 240px;
+            height: 120px;
+            padding: 1.5rem;
+            border-radius: 0.75rem;
+            background-color: #ffffff;
+            border: 1px solid #e8e8e8;
         }
 
         label {
@@ -94,14 +115,23 @@
 
 <body>
     <header role="banner">
+        <h1>🗓️ 투두리스트 관리</h1>
+        <p>간편하게 일정을 관리하세요</p>
     </header>
 
     <main role="main">
         <article aria-labelledby="to-do-list-add-section">
             <form id="addForm">
-                <h2 id="to-do-list-add-section">🗓️ 투두리스트 🗓️</h2>
+                <h2 id="to-do-list-add-section">투두리스트 등록하기</h2>
+
                 <input type="text" id="titleInput">
                 <button type="submit">추가</button>
+
+                <div>
+                    <textarea>
+
+                    </textarea>
+                </div>
             </form>
         </article>
         <section id="listSection">
