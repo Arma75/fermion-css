@@ -79,6 +79,16 @@
             transform: translate(-50%, -50%);
         }
 
+        input[type=date] {
+            width: 240px;
+            height: 48px;
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+            border-radius: 999em;
+            background-color: #ffffff;
+            border: 1px solid #e8e8e8;
+        }
+
         textarea {
             border-width: 0;
             outline-style: none;
@@ -91,7 +101,7 @@
             width: 240px;
             height: 120px;
             padding: 1.5rem;
-            border-radius: 0.75rem;
+            border-radius: 1.5rem;
             background-color: #ffffff;
             border: 1px solid #e8e8e8;
         }
@@ -124,14 +134,22 @@
             <form id="addForm">
                 <h2 id="to-do-list-add-section">투두리스트 등록하기</h2>
 
-                <input type="text" id="titleInput">
-                <button type="submit">추가</button>
+                <div>
+                    <label for="titleInput">제목</label>
+                    <input type="text" id="titleInput">
+                </div>
+                
+                <div>
+                    <label for="contentTextarea">내용</label>
+                    <textarea id="contentTextarea"></textarea>
+                </div>
 
                 <div>
-                    <textarea>
-
-                    </textarea>
+                    <label for="startDtInput">시작일자</label>
+                    <input type="date" id="startDtInput">
                 </div>
+
+                <button type="submit">추가</button>
             </form>
         </article>
         <section id="listSection">
