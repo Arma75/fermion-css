@@ -17,6 +17,10 @@
             background-color: #f3f4f6;
             padding: 2rem;
         }
+
+        label, span, input, textarea {
+            vertical-align: middle;
+        }
         button {
             border-width: 0;
             outline-style: none;
@@ -63,7 +67,6 @@
             height: 28px;
             border-radius: 0.75rem;
             border: 1px solid #e8e8e8;
-            vertical-align: middle;
             cursor: pointer;
         }
         input[type="checkbox"]:checked {
@@ -106,14 +109,6 @@
             border: 1px solid #e8e8e8;
         }
 
-        label {
-            vertical-align: middle;
-        }
-
-        span {
-            vertical-align: middle;
-        }
-
         article {
             padding: 2rem;
             background-color: #ffffff;
@@ -149,7 +144,10 @@
                     <input type="date" id="startDtInput">
                 </div>
 
-                <button type="submit">추가</button>
+                <div>
+                    <button type="reset">초기화</button>
+                    <button type="submit">추가</button>
+                </div>
             </form>
         </article>
         <section id="listSection">
