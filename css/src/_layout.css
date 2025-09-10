@@ -1,3 +1,10 @@
+:root {
+  --spacing-sm: 1.5rem;
+  --spacing-md: 2rem;
+  --spacing-lg: 3rem;
+  --border-radius-base: 1.5rem;
+}
+
 body {
     background-color: #fcfcfc;
 }
@@ -5,41 +12,41 @@ body > header,
 body > main,
 body > aside,
 body > footer {
-    padding: 3rem;
+    padding: var(--spacing-lg);
 }
 header {
-    padding: 1.5rem;
+    padding: var(--spacing-sm);
     background-color: #fff;
     border-bottom: 1px solid #e8e8e8;
 }
 main {
-    padding: 1.5rem;
+    padding: var(--spacing-sm);
     background-color: #fcfcfc;
 }
 
 aside {
     background-color: #fff;
-    padding: 1.5rem;
-    border-radius: 1.5rem;
+    padding: var(--spacing-sm);
+    border-radius: var(--border-radius-base);
     overflow: auto;
 }
 
 footer {
-    padding: 1.5rem;
+    padding: var(--spacing-sm);
     background-color: #fff;
     border-top: 1px solid #e8e8e8;
 }
 
 section {
     background-color: #fff;
-    padding: 2rem;
-    border-radius: 1.5rem;
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius-base);
     overflow: auto;
 }
 
 article {
     background-color: #fff;
-    padding: 2rem;
-    border-radius: 1.5rem;
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius-base);
     border: 1px solid #e8e8e8;
 }
