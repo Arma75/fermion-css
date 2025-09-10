@@ -1,5 +1,5 @@
 # fermion-css
-no class css library
+"눈에 잘 보이는 디자인"을 지향하는 no class css 라이브러리입니다.
 
 ## File structure diagram
 ```
