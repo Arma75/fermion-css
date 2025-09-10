@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>구조적 페이지 레이아웃 예제</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+        * {
+            font-family: "Roboto", sans-serif;
+            font-size: 16px;
+            font-weight: normal;
+            line-height: 1.5;
+
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+            text-decoration: none;
+
+            appearance: none;
+            outline: none;
+            box-shadow: none;
+        }
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bolder;
+    /* margin-top: 2rem;
+    margin-bottom: 1rem; */
+}
+
+h1 {
+    font-size: 3.25rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+h4 {
+    font-size: 1.5rem;
+}
+
+h5 {
+    font-size: 1.25rem;
+}
+
+h6 {
+    font-size: 1rem;
+}
+strong, b {
+    font-weight: bold;
+}
+em, i {
+    font-style: italic;
+}
+
+        body {
+            background-color: #fcfcfc;
+        }
+        header {
+            padding: 3rem;
+            background-color: #fff;
+            border-bottom: 1px solid #e8e8e8;
+        }
+        main {
+            padding: 3rem;
+            background-color: #fcfcfc;
+        }
+
+        aside {
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 1.5rem;
+            overflow: auto;
+        }
+
+        footer {
+            padding: 3rem;
+            background-color: #fff;
+            border-top: 1px solid #e8e8e8;
+            /* background-color: #1a1a1a;
+            color: #fff; */
+        }
+
+        section {
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 1.5rem;
+            overflow: auto;
+        }
+
+        article {
+            background-color: #fff;
+            padding: 1.5rem;
+            border-radius: 1rem;
+            border: 1px solid #e8e8e8;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Online Store</h1>
+        <nav>
+            <ul>
+                <li><a href="#">내 프로필</a></li>
+                <li><a href="#">설정</a></li>
+                <li><a href="#">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article>
+            <header>
+                <h2>새로운 기술 트렌드를 주도하다</h2>
+                <p>
+                    <small>작성자: 김현진</small>
+                    <small>작성일: 2025.09.10</small>
+                </p>
+            </header>
+            
+            <section>
+                <div>
+                    <span>기사 대표 이미지</span>
+                </div>
+                <h3>서론</h3>
+                <p>
+                    <span>최근 생성형 인공지능(AI) 기술이 빠르게 발전하면서, 우리 사회는 전례 없는 변화의 물결을 맞이하고 있습니다.</span>
+                </p>
+            </section>
+            
+            <section>
+                <h3>본문</h3>
+                <p>
+                    <span>AI는 단순히 기술적 도구를 넘어, 우리의 일상생활, 산업 구조, 그리고 문화에 깊숙이 스며들고 있습니다.</span>
+                </p>
+                <p>
+                    <span>특히, 생성형 AI는 콘텐츠 제작, 디자인, 프로그래밍 등 창의적인 영역에서 놀라운 가능성을 보여주고 있습니다.</span>
+                </p>
+            </section>
+
+            <section>
+                <h3>결론</h3>
+                <p>
+                    <span>AI 기술의 발전은 더 이상 먼 미래의 이야기가 아닙니다.</span>
+                    <span>우리는 이러한 변화를 이해하고 적응하며, AI가 가져올 새로운 시대에 능동적으로 대비해야 할 것입니다.</span>
+                </p>
+            </section>
+        </article>
+
+        <section>
+            <h2>오늘의 뉴스</h2>
+            <article>
+                <div>
+                    <span>기사 이미지</span>
+                </div>
+                <h3>생성형 AI, 새로운 기술 트렌드를 주도하다</h3>
+                <p><small>2025.09.10 | 기술</small></p>
+                <p>
+                    <span>최근 생성형 인공지능 기술이 빠르게 발전하면서...</span>
+                </p>
+            </article>
+        </section>
+
+        <aside>
+            <article>
+                <h2>현재 시간</h2>
+                <div>
+                    <span>12:34 PM</span>
+                </div>
+            </article>
+        </aside>
+    </main>
+
+    <footer>
+        <p><small>&copy; 2025. My Online Store. All rights reserved.</small></p>
+        <button onclick="document.getElementsByTagName('dialog')[0].showModal()">popup</button>
+    </footer>
+
+    <dialog>
+        <div>
+            <h3>알림</h3>
+            <p>새로운 소식을 확인하세요!</p>
+            <button onclick="this.closest('dialog').close()">닫기</button>
+        </div>
+    </dialog>
+</body>
+</html>
