@@ -35,3 +35,6 @@
     box-shadow: none;
 }
 ```
+
+!issue
+fermion CSS를 적용하면서 디자인을 체크할만한 페이지와 컴포넌트들이 필요하다.
